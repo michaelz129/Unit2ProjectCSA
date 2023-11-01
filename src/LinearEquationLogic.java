@@ -51,8 +51,9 @@ public class LinearEquationLogic {
         }
     }
     private String coordP(String coord){
-        coord = coord.substring(coord.indexOf("(")+1);
-        coord = coord.substring(0,coord.indexOf(")"));
+        coord = coord.replace("(","");
+        coord = coord.replace(")","");
+        coord = coord.replace(" ","");
         return coord;
     }
     private int xCoordParse(String coord){
